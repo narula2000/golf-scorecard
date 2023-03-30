@@ -23,8 +23,7 @@ const Home: NextPage = () => {
             >
               <h3 className="text-2xl font-bold">Dashboard</h3>
               <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
+                Summary of your golf game. See your best and worst scores, your statistics, and more.
               </div>
             </Link>
             <Link
@@ -34,8 +33,7 @@ const Home: NextPage = () => {
             >
               <h3 className="text-2xl font-bold">Front 9</h3>
               <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
+                Record your scores for the front 9 holes.
               </div>
             </Link>
             <Link
@@ -45,8 +43,7 @@ const Home: NextPage = () => {
             >
               <h3 className="text-2xl font-bold">Back 9</h3>
               <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
+                Record your scores for the back 9 holes.
               </div>
             </Link>
             <Link
@@ -56,8 +53,7 @@ const Home: NextPage = () => {
             >
               <h3 className="text-2xl font-bold">About us</h3>
               <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
+                Learn more about us.
               </div>
             </Link>
           </div>
