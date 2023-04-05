@@ -53,6 +53,16 @@ const Front9: NextPage = () => {
               <Button>2</Button>
               <Button>3</Button>
             </ButtonRow>
+            <ButtonRow>
+              <Button>4</Button>
+              <Button>5</Button>
+              <Button>6</Button>
+            </ButtonRow>
+            <ButtonRow>
+              <Button>7</Button>
+              <Button>8</Button>
+              <Button>9</Button>
+            </ButtonRow>
           </Card>
         </div>
       </main>
