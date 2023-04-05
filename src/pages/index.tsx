@@ -19,7 +19,6 @@ const Home: NextPage = () => {
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
               href="/dashboard"
-              target="_blank"
             >
               <h3 className="text-2xl font-bold">Dashboard</h3>
               <div className="text-lg">
@@ -29,7 +28,6 @@ const Home: NextPage = () => {
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
               href="/front-9"
-              target="_blank"
             >
               <h3 className="text-2xl font-bold">Front 9</h3>
               <div className="text-lg">
@@ -39,7 +37,6 @@ const Home: NextPage = () => {
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
               href="/back-9"
-              target="_blank"
             >
               <h3 className="text-2xl font-bold">Back 9</h3>
               <div className="text-lg">
