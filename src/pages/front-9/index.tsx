@@ -25,7 +25,9 @@ const Button = ({ children }: ButtonProps) => {
 };
 
 const ButtonRow = ({ children }: ButtonRowProps) => {
-  return <div className="flex flex-row justify-between gap-4 p-2">{children}</div>;
+  return (
+    <div className="flex flex-row justify-between gap-4 p-2">{children}</div>
+  );
 };
 
 const Front9: NextPage = () => {

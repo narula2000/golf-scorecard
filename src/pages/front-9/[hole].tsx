@@ -1,8 +1,9 @@
 import { type NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { CardProps } from '~/components/card';
+import { type CardProps } from '~/components/card';
 import Counter from '~/components/counter';
+import Fairway from '~/components/fairway';
 
 /**
  * -- Hole Information --
@@ -32,7 +33,6 @@ const Card = ({ children }: CardProps) => {
     </div>
   );
 };
-
 
 const Hole: NextPage = () => {
   const router = useRouter();
@@ -72,6 +72,7 @@ const Hole: NextPage = () => {
             </Row>
             <Row>
               <p className="text-2xl p-2">Fairway</p>
+              <Fairway />
             </Row>
             <Row>
               <p className="text-2xl p-2">GIR</p>
