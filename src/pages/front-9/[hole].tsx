@@ -1,11 +1,11 @@
 import { type NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Card from '~/components/card';
+import { CardProps } from '~/components/card';
 import Counter from '~/components/counter';
 
 /**
- * Hole Information
+ * -- Hole Information --
  * Par
  * Stroke
  * Putts
@@ -25,6 +25,15 @@ const Row = ({ children }: RowProps) => {
   return <div className="flex flex-row justify-between gap-4">{children}</div>;
 };
 
+const Card = ({ children }: CardProps) => {
+  return (
+    <div className="h-auto w-3/4 flex-col gap-3 rounded-xl bg-white/10 p-4 text-white">
+      {children}
+    </div>
+  );
+};
+
+
 const Hole: NextPage = () => {
   const router = useRouter();
   const hole = router.query.hole;
@@ -42,9 +51,42 @@ const Hole: NextPage = () => {
           </h1>
           <Card>
             <Row>
-              <p>Par</p>
+              <p className="text-2xl p-2">Par</p>
               <Counter />
             </Row>
+            <Row>
+              <p className="text-2xl p-2">Stroke</p>
+              <Counter />
+            </Row>
+            <Row>
+              <p className="text-2xl p-2">Putts</p>
+              <Counter />
+            </Row>
+            <Row>
+              <p className="text-2xl p-2">Sand Shots</p>
+              <Counter />
+            </Row>
+            <Row>
+              <p className="text-2xl p-2">Penalties</p>
+              <Counter />
+            </Row>
+            <Row>
+              <p className="text-2xl p-2">Fairway</p>
+            </Row>
+            <Row>
+              <p className="text-2xl p-2">GIR</p>
+            </Row>
+            <Row>
+              <p className="text-2xl p-2">Sand Save</p>
+            </Row>
+            <Row>
+              <p className="text-2xl p-2">Up & Down</p>
+            </Row>
+            <div className="flex flex-row justify-between gap-4">
+              <p className="text-2xl p-2">Prev</p>
+              <p className="text-2xl p-2">Save</p>
+              <p className="text-2xl p-2">Next</p>
+            </div>
           </Card>
         </div>
       </main>

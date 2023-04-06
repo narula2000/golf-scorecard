@@ -15,7 +15,7 @@ const Button = ({ children }: ButtonProps) => {
   return (
     <Link href={`/front-9/${encodeURIComponent(children)}`}>
       <button
-        className="flex h-20 w-20 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70"
+        className="flex h-20 w-20 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 p-2"
         type="button"
       >
         {children}
@@ -25,7 +25,7 @@ const Button = ({ children }: ButtonProps) => {
 };
 
 const ButtonRow = ({ children }: ButtonRowProps) => {
-  return <div className="flex flex-row justify-between gap-4">{children}</div>;
+  return <div className="flex flex-row justify-between gap-4 p-2">{children}</div>;
 };
 
 const Front9: NextPage = () => {
