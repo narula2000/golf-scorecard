@@ -22,7 +22,8 @@ const Home: NextPage = () => {
             >
               <h3 className="text-2xl font-bold">Dashboard</h3>
               <div className="text-lg">
-                Summary of your golf game. See your best and worst scores, your statistics, and more.
+                Summary of your golf game. See your best and worst scores, your
+                statistics, and more.
               </div>
             </Link>
             <Link
@@ -49,9 +50,7 @@ const Home: NextPage = () => {
               target="_blank"
             >
               <h3 className="text-2xl font-bold">About us</h3>
-              <div className="text-lg">
-                Learn more about us.
-              </div>
+              <div className="text-lg">Learn more about us.</div>
             </Link>
           </div>
         </div>

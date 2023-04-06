@@ -13,9 +13,7 @@ interface ButtonProps {
 
 const Button = ({ children }: ButtonProps) => {
   return (
-    <Link
-      href={`/front-9/${encodeURIComponent(children)}`}
-    >
+    <Link href={`/front-9/${encodeURIComponent(children)}`}>
       <button
         className="bg-black/50 rounded-full text-white w-20 h-20 flex items-center justify-center hover:bg-black/70"
         type="button"
@@ -23,16 +21,12 @@ const Button = ({ children }: ButtonProps) => {
         {children}
       </button>
     </Link>
-  )
-}
+  );
+};
 
 const ButtonRow = ({ children }: ButtonRowProps) => {
-  return (
-    <div className="flex flex-row gap-4 justify-between">
-      {children}
-    </div>
-  )
-}
+  return <div className="flex flex-row gap-4 justify-between">{children}</div>;
+};
 
 const Front9: NextPage = () => {
   return (
