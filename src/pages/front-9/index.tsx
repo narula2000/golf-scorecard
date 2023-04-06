@@ -1,7 +1,7 @@
-import { type NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import Card from "~/components/card";
+import { type NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import Card from '~/components/card';
 
 interface ButtonRowProps {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ const Button = ({ children }: ButtonProps) => {
   return (
     <Link href={`/front-9/${encodeURIComponent(children)}`}>
       <button
-        className="bg-black/50 rounded-full text-white w-20 h-20 flex items-center justify-center hover:bg-black/70"
+        className="flex h-20 w-20 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70"
         type="button"
       >
         {children}
@@ -25,7 +25,7 @@ const Button = ({ children }: ButtonProps) => {
 };
 
 const ButtonRow = ({ children }: ButtonRowProps) => {
-  return <div className="flex flex-row gap-4 justify-between">{children}</div>;
+  return <div className="flex flex-row justify-between gap-4">{children}</div>;
 };
 
 const Front9: NextPage = () => {

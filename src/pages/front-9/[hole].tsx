@@ -1,8 +1,8 @@
-import { type NextPage } from "next";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Card from "~/components/card";
-import Counter from "~/components/counter";
+import { type NextPage } from 'next';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Card from '~/components/card';
+import Counter from '~/components/counter';
 
 /**
  * Hole Information
@@ -22,7 +22,7 @@ interface RowProps {
 }
 
 const Row = ({ children }: RowProps) => {
-  return <div className="flex flex-row gap-4 justify-between">{children}</div>;
+  return <div className="flex flex-row justify-between gap-4">{children}</div>;
 };
 
 const Hole: NextPage = () => {
