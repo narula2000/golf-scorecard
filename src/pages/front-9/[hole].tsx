@@ -1,6 +1,8 @@
+import { Switch } from '@headlessui/react';
 import { type NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { type CardProps } from '~/components/card';
 import Counter from '~/components/counter';
 import Fairway from '~/components/fairway';
@@ -22,8 +24,30 @@ interface RowProps {
   children: React.ReactNode;
 }
 
+const Example = () => {
+  const [enabled, setEnabled] = useState(false);
+
+  return (
+      <Switch
+        checked={enabled}
+        onChange={setEnabled}
+        className={`${enabled ? 'bg-white/70' : 'bg-black'}
+          relative inline-flex h-9 w-16 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+      >
+        <span className="sr-only">GIR</span>
+        <span
+          aria-hidden="true"
+          className={`${enabled ? 'translate-x-7' : 'translate-x-0'}
+            pointer-events-none inline-block h-8 w-8 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+        />
+      </Switch>
+  );
+};
+
 const Row = ({ children }: RowProps) => {
-  return <div className="flex flex-row justify-between gap-4">{children}</div>;
+  return (
+    <div className="flex flex-row justify-between gap-4 p-3">{children}</div>
+  );
 };
 
 const Card = ({ children }: CardProps) => {
@@ -76,12 +100,15 @@ const Hole: NextPage = () => {
             </Row>
             <Row>
               <p className="text-2xl p-2">GIR</p>
+              <Example />
             </Row>
             <Row>
               <p className="text-2xl p-2">Sand Save</p>
+              <Example />
             </Row>
             <Row>
               <p className="text-2xl p-2">Up & Down</p>
+              <Example />
             </Row>
             <div className="flex flex-row justify-between gap-4">
               <p className="text-2xl p-2">Prev</p>

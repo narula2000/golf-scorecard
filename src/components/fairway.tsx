@@ -9,18 +9,22 @@ const Fairway = () => {
 
   return (
     <RadioGroup
-      className="flex flex-row w-32 p-4 bg-black/10 rounded-xl justify-center"
+      className="flex flex-row h-16 w-32 p-4 bg-black/10 rounded-xl justify-center"
       value={fairway}
       onChange={setFairway}
-    >{
-      [FairwayEnum.Left, FairwayEnum.On, FairwayEnum.Right, FairwayEnum.Hazards].map((value) => (
-      <RadioGroup.Option value={value} key={value} className="p-3">
-        {({ checked }) => (
-          <span className={checked ? 'bg-black/50' : ''}>{value[0]}</span>
-        )}
-      </RadioGroup.Option>
-      ))
-    }
+    >
+      {[
+        FairwayEnum.Left,
+        FairwayEnum.On,
+        FairwayEnum.Right,
+        FairwayEnum.Hazards,
+      ].map((value) => (
+        <RadioGroup.Option value={value} key={value} className="p-3 h-3 content-center">
+          {({ checked }) => (
+            <span className={checked ? 'bg-black/50' : ''}>{value[0]}</span>
+          )}
+        </RadioGroup.Option>
+      ))}
     </RadioGroup>
   );
   // return (
